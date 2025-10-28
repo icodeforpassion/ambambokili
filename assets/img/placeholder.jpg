@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ambambo Kili placeholder</title>
+  <desc id="desc">Kerala inspired illustration with green and amber shapes</desc>
+  <rect width="800" height="600" fill="#0d5c4a"/>
+  <circle cx="620" cy="160" r="120" fill="#f2a900" opacity="0.85"/>
+  <path d="M120 520 C200 360 360 360 440 520" fill="#f7d488" opacity="0.8"/>
+  <path d="M80 500 C160 340 300 340 380 500" fill="#168f65" opacity="0.9"/>
+  <text x="50%" y="55%" text-anchor="middle" font-family="'Poppins',sans-serif" font-size="64" fill="#ffffff">Ambambo Kili</text>
+</svg>

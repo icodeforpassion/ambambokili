@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ambambo Kili – Malayalam Kids Songs and Cartoons</title>
+  <meta name="description" content="Discover Malayalam kids songs, stories, and Kerala cartoons from Ambambo Kili with joyful playlists and family-friendly fun." />
+  <link rel="canonical" href="https://ambambokili.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ambambo Kili – Malayalam Kids Songs and Cartoons" />
+  <meta property="og:description" content="Browse joyful Malayalam kids songs, stories, and Kerala cartoons from Ambambo Kili." />
+  <meta property="og:url" content="https://ambambokili.github.io/" />
+  <meta property="og:image" content="https://ambambokili.github.io/assets/img/placeholder.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ambambo Kili – Malayalam Kids Songs and Cartoons" />
+  <meta name="twitter:description" content="Malayalam kids songs, stories, and Kerala cartoons from Ambambo Kili." />
+  <meta name="twitter:image" content="https://ambambokili.github.io/assets/img/placeholder.jpg" />
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script defer src="/assets/js/app.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a class="logo" href="/">Ambambo Kili</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/videos/">Videos</a></li>
+          <li><a href="/categories/">Categories</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a class="subscribe-link" href="https://www.youtube.com/@AmbamboKili">Subscribe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <h1>Ambambo Kili</h1>
+          <p class="tagline">Malayalam kids songs, stories, and Kerala cartoons</p>
+          <a class="btn primary" href="https://www.youtube.com/@AmbamboKili">Subscribe on YouTube</a>
+        </div>
+        <figure class="hero-figure" aria-hidden="true">
+          <img src="/assets/img/placeholder.jpg" alt="Colorful Kerala inspired illustration" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="latest" aria-labelledby="latest-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="latest-heading">Latest videos</h2>
+          <a class="view-all" href="/videos/">View all videos</a>
+        </div>
+        <div class="video-grid" id="latest-videos" data-grid="latest"></div>
+      </div>
+    </section>
+
+    <section class="categories-highlight" aria-labelledby="popular-categories">
+      <div class="container">
+        <h2 id="popular-categories">Popular categories</h2>
+        <div class="category-grid" id="popular-categories-grid"></div>
+      </div>
+    </section>
+
+    <section class="seo-copy" aria-labelledby="seo-heading">
+      <div class="container">
+        <h2 id="seo-heading">Malayalam joy for every family</h2>
+        <p>
+          Ambambo Kili curates delightful <strong>malayalam cartoon songs for babies</strong>, lively tunes for every age, and warm folk tales that keep little minds dreaming. Our collection captures the vibrant colors of Kerala with energetic beats perfect for a <strong>malayalam folk dance performance</strong> at school or family gatherings. Explore gentle lullabies and catchy rhymes that make rehearsals easy for a <strong>malayalam song for school annual day</strong>, plus hilarious skits when you need a <strong>cartoon comedy video song malayalam</strong>. Whether it is a soothing bedtime hum or a <strong>malayalam folk dance for lkg students</strong>, the Ambambo Kili flock sings, dances, and giggles with your kids every single day.
+        </p>
+      </div>
+    </section>
+
+    <section class="ambambo-kili-songs" aria-labelledby="ambambo-kili-heading">
+      <style>
+        .ambambo-kili-songs {
+          padding: 3rem 1rem;
+          background: linear-gradient(180deg, #fffdf5 0%, #ffffff 100%);
+        }
+
+        .ambambo-kili-songs .songs-wrapper {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .ambambo-kili-songs h2 {
+          font-size: clamp(2rem, 5vw, 2.75rem);
+          text-align: center;
+          color: #155e3b;
+          margin-bottom: 1rem;
+        }
+
+        .ambambo-kili-songs p.section-intro {
+          text-align: center;
+          max-width: 720px;
+          margin: 0 auto 2.5rem;
+          font-size: 1.05rem;
+          color: #35524a;
+        }
+
+        .songs-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 1.75rem;
+        }
+
+        @media (max-width: 960px) {
+          .songs-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 640px) {
+          .songs-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .song-card {
+          background: #ffffff;
+          border-radius: 1.25rem;
+          box-shadow: 0 12px 32px rgba(21, 94, 59, 0.08);
+          overflow: hidden;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .song-card:hover,
+        .song-card:focus-within {
+          transform: translateY(-6px) scale(1.01);
+          box-shadow: 0 18px 40px rgba(21, 94, 59, 0.18);
+        }
+
+        .song-card iframe {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          border: 0;
+          display: block;
+          border-radius: 1.25rem 1.25rem 0 0;
+        }
+
+        .song-card .song-content {
+          padding: 1.5rem 1.25rem 1.75rem;
+        }
+
+        .song-card h3 {
+          font-size: 1.3rem;
+          color: #0f5132;
+          margin-bottom: 0.65rem;
+        }
+
+        .song-card p {
+          margin: 0;
+          color: #51635b;
+          font-size: 1rem;
+        }
+
+        .songs-footer {
+          margin-top: 3rem;
+          text-align: center;
+          font-weight: 600;
+          color: #0f5132;
+        }
+      </style>
+      <div class="songs-wrapper">
+        <h2 id="ambambo-kili-heading">🎵 Malayalam Kids Songs by Ambambo Kili</h2>
+        <p class="section-intro">Discover a playful showcase of Ambambo Kili favourites with richly illustrated Malayalam tunes that delight little listeners and boost on-page SEO for joyful family music time.</p>
+        <div class="songs-grid" role="list">
+          <article class="song-card" role="listitem">
+            <iframe src="https://www.youtube.com/embed/PwLja9dkXzE" title="Baby Baby Karayalle" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="song-content">
+              <h3>Baby Baby Karayalle</h3>
+              <p>A soothing Malayalam baby lullaby with soft melody and adorable visuals.</p>
+            </div>
+          </article>
+          <article class="song-card" role="listitem">
+            <iframe src="https://www.youtube.com/embed/CtsF20Kcp4I" title="Kochu Nakshathrame (Little Star)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="song-content">
+              <h3>Kochu Nakshathrame (Little Star)</h3>
+              <p>A dreamy night-time Malayalam rhyme about a little star and a child’s friendship.</p>
+            </div>
+          </article>
+          <article class="song-card" role="listitem">
+            <iframe src="https://www.youtube.com/embed/GfM0cftOJ3k" title="Dolphin’s Birthday" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="song-content">
+              <h3>Dolphin’s Birthday</h3>
+              <p>A cheerful ocean adventure where a dolphin and friends celebrate a birthday party.</p>
+            </div>
+          </article>
+          <article class="song-card" role="listitem">
+            <iframe src="https://www.youtube.com/embed/GfM0cftOJ3k" title="Onnanam Kochu Thumbi" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="song-content">
+              <h3>Onnanam Kochu Thumbi</h3>
+              <p>An energetic Malayalam nursery rhyme with dancing kids and lively beats.</p>
+            </div>
+          </article>
+          <article class="song-card" role="listitem">
+            <iframe src="https://www.youtube.com/embed/DCA1DYbhA-M" title="Koo Koo Theevandi" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="song-content">
+              <h3>Koo Koo Theevandi</h3>
+              <p>A fun train-themed kids’ song full of rhythm and cheerful animation.</p>
+            </div>
+          </article>
+          <article class="song-card" role="listitem">
+            <iframe src="https://www.youtube.com/embed/tCq9EGqlA3U" title="Pachaklari Song" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="song-content">
+              <h3>Pachaklari Song</h3>
+              <p>A colorful vegetable market song teaching Malayalam words through music.</p>
+            </div>
+          </article>
+          <article class="song-card" role="listitem">
+            <iframe src="https://www.youtube.com/embed/Q7XSyvbV-q0" title="Ambiliyammava Thaamara Kombilil Enthundu" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="song-content">
+              <h3>Ambiliyammava Thaamara Kombilil Enthundu</h3>
+              <p>A nostalgic Malayalam rhyme about moonlight, tenderness, and love.</p>
+            </div>
+          </article>
+        </div>
+        <p class="songs-footer">More kids’ songs coming soon on our YouTube channel — subscribe to Ambambo Kili for weekly releases.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <h3>Ambambo Kili</h3>
+        <p>Malayalam kids songs, stories, and Kerala cartoons.</p>
+        <p>&copy; <span id="footer-year"></span> Ambambo Kili. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/videos/">Videos</a></li>
+          <li><a href="/categories/">Categories</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:hello@ambambokili.example">hello@ambambokili.example</a></p>
+        <p><a href="https://www.youtube.com/@AmbamboKili">YouTube channel</a></p>
+      </div>
+    </div>
+  </footer>
+  <script type="application/ld+json" id="ld-home"></script>
+</body>
+</html>

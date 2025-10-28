@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ambambokili.github.io/sitemap.xml

@@ -3,9 +3,9 @@ const CONFIG = {
   CHANNEL_TAGLINE: "Malayalam kids songs, stories, and Kerala cartoons",
   CHANNEL_URL: "https://www.youtube.com/@AmbamboKili",
   PLAYLIST_URL: "https://www.youtube.com/playlist?list=REPLACE",
-  SITE_URL: "https://ambambokili.github.io",
+  SITE_URL: "https://icodeforpassion.github.io/ambambokili",
   CONTACT_EMAIL: "hello@ambambokili.example",
-  DEFAULT_THUMB: "/assets/img/placeholder.jpg"
+  DEFAULT_THUMB: "/ambambokili/assets/img/placeholder.jpg"
 };
 
 const AppState = {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadVideos() {
   if (AppState.videos.length) return AppState.videos;
   try {
-    const response = await fetch("/data/videos.json");
+    const response = await fetch("/ambambokili/data/videos.json");
     if (!response.ok) throw new Error("Failed to load videos.json");
     const data = await response.json();
     AppState.videos = data.sort((a, b) => new Date(b.published) - new Date(a.published));
@@ -114,7 +114,7 @@ function renderPopularCategories() {
           <img src="${videos[0]?.thumb_url || CONFIG.DEFAULT_THUMB}" alt="${category} category" loading="lazy">
           <h3>${category}</h3>
           <p>${videos.length} videos</p>
-          <a class="btn primary" href="/categories/${slug}/">Explore ${category}</a>
+          <a class="btn primary" href="/ambambokili/categories/${slug}/">Explore ${category}</a>
         </article>`;
     })
     .join("");
@@ -221,7 +221,7 @@ function renderCategoriesIndex() {
           <img src="${videos[0]?.thumb_url || CONFIG.DEFAULT_THUMB}" alt="${category} Malayalam kids songs" loading="lazy">
           <h3>${category}</h3>
           <p>${videos.length} joyful videos</p>
-          <a class="btn primary" href="/categories/${slug}/">Open ${category}</a>
+          <a class="btn primary" href="/ambambokili/categories/${slug}/">Open ${category}</a>
         </article>`;
     })
     .join("");
@@ -269,10 +269,10 @@ function renderVideoPage(slug) {
   if (!main) return;
   const breadcrumbs = `
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a> › <a href="/videos/">Videos</a> › ${video.title}
+      <a href="/ambambokili/">Home</a> › <a href="/ambambokili/videos/">Videos</a> › ${video.title}
     </nav>`;
   const categories = video.categories
-    .map(category => `<a href="/categories/${slugify(category)}/">${category}</a>`)
+    .map(category => `<a href="/ambambokili/categories/${slugify(category)}/">${category}</a>`)
     .join(", ");
   const playlistButtons = (video.playlist_urls || [])
     .map(url => `<a class="btn" href="${url}">Open playlist</a>`)
@@ -322,7 +322,7 @@ function renderVideoPage(slug) {
       <section>
         <h2>More from Ambambo Kili</h2>
         <div class="more-links">
-          ${moreLinks.map(item => `<a href="/videos/${item.slug}/">Discover the ${item.title} video story</a>`).join("")}
+          ${moreLinks.map(item => `<a href="/ambambokili/videos/${item.slug}/">Discover the ${item.title} video story</a>`).join("")}
         </div>
       </section>
     </article>
@@ -402,7 +402,7 @@ function setOrCreateLink(rel, href) {
 function videoCard(video) {
   return `
     <article class="video-card">
-      <a href="/videos/${video.slug}/">
+      <a href="/ambambokili/videos/${video.slug}/">
         <img src="${video.thumb_url || CONFIG.DEFAULT_THUMB}" alt="${video.title}" loading="lazy">
         <h3>${video.title}</h3>
       </a>
@@ -411,7 +411,7 @@ function videoCard(video) {
         <span> · ${formatDuration(video.duration)}</span>
       </div>
       <p>${video.description_short}</p>
-      <a class="btn" href="/videos/${video.slug}/">Open video page</a>
+      <a class="btn" href="/ambambokili/videos/${video.slug}/">Open video page</a>
     </article>`;
 }
 

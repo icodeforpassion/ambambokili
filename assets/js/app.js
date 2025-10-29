@@ -2,7 +2,7 @@ const CONFIG = {
   CHANNEL_NAME: "Ambambo Kili",
   CHANNEL_TAGLINE: "Malayalam kids songs, stories, and Kerala cartoons",
   CHANNEL_URL: "https://www.youtube.com/@AmbamboKili",
-  PLAYLIST_URL: "https://www.youtube.com/playlist?list=REPLACE",
+  PLAYLIST_URL: "https://www.youtube.com/playlist?list=RDXqZsoesa55w",
   SITE_URL: "https://icodeforpassion.github.io/ambambokili",
   CONTACT_EMAIL: "hello@ambambokili.example",
   DEFAULT_THUMB: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"

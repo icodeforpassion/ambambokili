@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ambambokili.github.io/sitemap.xml
+Sitemap: https://icodeforpassion.github.io/ambambokili/sitemap.xml

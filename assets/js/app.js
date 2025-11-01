@@ -299,6 +299,7 @@ function renderVideoPage(slug) {
       <section class="video-description">
         <p>${video.description_long}</p>
       </section>
+      ${renderLyricsSection(video.lyrics)}
       <section>
         <h2>Educational value</h2>
         <ul class="educational-list">
@@ -435,6 +436,20 @@ function generateEducationalPoints(video) {
   return Array.from(items).slice(0, 6);
 }
 
+function renderLyricsSection(lyrics) {
+  if (!Array.isArray(lyrics) || !lyrics.length) {
+    return "";
+  }
+  const stanzas = lyrics
+    .map(stanza => `<p>${stanza.split("\n").map(line => escapeHtml(line)).join("<br>")}</p>`)
+    .join("");
+  return `
+      <section class="video-lyrics">
+        <h2>Lyrics</h2>
+        <div class="lyrics-text">${stanzas}</div>
+      </section>`;
+}
+
 function slugify(text) {
   return text
     .toString()
@@ -442,6 +457,15 @@ function slugify(text) {
     .replace(/&/g, "and")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "");
+}
+
+function escapeHtml(str = "") {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function injectHomeJsonLd() {

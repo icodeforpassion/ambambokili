@@ -3,329 +3,1276 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ambambo Kili Video Library – Malayalam Lullabies, Kids Songs &amp; Action Rhymes</title>
-  <meta name="description" content="Browse Ambambo Kili’s Malayalam kids songs, lullabies, folk dance videos, and LKG action rhymes. Filter playlists that drive viewers to the official YouTube channel.">
-  <meta name="keywords" content="Ambambo Kili videos, Malayalam kids songs, Malayalam lullabies, Malayalam folk songs for kids, Malayalam action song for kg students, Malayalam dance songs, Malayalam nursery rhymes, Malayalam kids YouTube">
-  <meta name="author" content="Ambambo Kili">
-  <meta name="robots" content="index, follow">
+  <title>Ambambo Kili Malayalam Kids Songs | Folk, Lullabies &amp; Learning Rhymes 2025</title>
+  <meta name="description" content="Watch Ambambo Kili’s full library of Malayalam, Tamil, Telugu, and Kannada kids’ songs — folk tunes, lullabies, and rhymes animated in Kerala style.">
+  <meta name="keywords" content="Malayalam kids songs, Ambambo Kili, Kerala rhymes, lullaby, Tamil kids song, Telugu kids rhyme, Kannada lullaby, Malayalam cartoon">
+  <link rel="canonical" href="https://www.ambambokili.com/videos">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Ambambo Kili Malayalam Kids Songs | Folk, Lullabies &amp; Learning Rhymes 2025">
+  <meta property="og:description" content="Watch Ambambo Kili’s full library of Malayalam, Tamil, Telugu, and Kannada kids’ songs — folk tunes, lullabies, and rhymes animated in Kerala style.">
+  <meta property="og:url" content="https://www.ambambokili.com/videos">
   <meta property="og:site_name" content="Ambambo Kili">
-  <meta property="og:locale" content="en_IN">
-  <meta property="og:title" content="Ambambo Kili Video Library – Malayalam Lullabies, Kids Songs &amp; Action Rhymes">
-  <meta property="og:description" content="Stream Malayalam lullabies, kids action songs, and folk dance performances curated to grow the Ambambo Kili YouTube channel.">
-  <meta property="og:url" content="https://icodeforpassion.github.io/ambambokili/">
-  <meta property="og:image" content="https://icodeforpassion.github.io/ambambokili/assets/ambambo-thumbnail.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ambambo Kili Video Library – Malayalam Lullabies, Kids Songs &amp; Action Rhymes">
-  <meta name="twitter:description" content="Filter Malayalam lullabies, folk songs, and LKG action rhymes from the Ambambo Kili video hub.">
-  <meta name="twitter:image" content="https://icodeforpassion.github.io/ambambokili/assets/ambambo-thumbnail.jpg">
-  <link rel="canonical" href="https://icodeforpassion.github.io/ambambokili/videos/">
-  <meta name="google-site-verification" content="JfQEtbHisqDarx-8zVDhwjNwPBH_G0Wt98PVrwpOh-Y">
-  <link rel="stylesheet" href="/ambambokili/assets/css/styles.css">
-  <script defer src="/ambambokili/assets/js/app.js"></script>
+  <meta name="twitter:title" content="Ambambo Kili Malayalam Kids Songs | Folk, Lullabies &amp; Learning Rhymes 2025">
+  <meta name="twitter:description" content="Watch Ambambo Kili’s full library of Malayalam, Tamil, Telugu, and Kannada kids’ songs — folk tunes, lullabies, and rhymes animated in Kerala style.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #ffffff;
+      --bg-accent: #f8fff8;
+      --text-primary: #1f2a1f;
+      --text-secondary: #4a5c4a;
+      --card-shadow: 0 12px 30px rgba(31, 42, 31, 0.08);
+      --card-border: rgba(143, 185, 143, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      padding: 3.5rem 1.5rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg-accent) 0%, rgba(248, 255, 248, 0.2) 100%);
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      margin: 0 auto;
+      max-width: 720px;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    main {
+      padding: 2rem 1.5rem 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .video-card {
+      background: var(--bg-accent);
+      border-radius: 18px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--card-border);
+      overflow: hidden;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 18px 40px rgba(31, 42, 31, 0.16);
+    }
+
+    .video-card figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-card .video-content {
+      padding: 1.25rem 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+    }
+
+    .video-card h2 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .video-card h2 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .video-card h2 a:hover,
+    .video-card h2 a:focus {
+      text-decoration: underline;
+    }
+
+    .video-meta {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding: 3rem 1.5rem 4rem;
+      background: linear-gradient(0deg, var(--bg-accent) 0%, rgba(248, 255, 248, 0.1) 100%);
+      color: var(--text-secondary);
+    }
+
+    .footer-note a {
+      color: #2c6c40;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer-note a:hover,
+    .footer-note a:focus {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 3rem 1.25rem 1.25rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .video-card .video-content {
+        padding: 1.1rem 1.25rem 1.5rem;
+      }
+
+      .video-card h2 {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGallery",
+  "name": "Ambambo Kili Malayalam Kids Songs – Video Gallery",
+  "description": "A joyful collection of Malayalam, Tamil, Telugu, and Kannada kids’ songs that celebrate Kerala’s rhythm, culture, and imagination.",
+  "url": "https://www.ambambokili.com/videos",
+  "hasPart": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "VideoObject",
+      "name": "“വള്ളത്തിങ്കൽ താളമടിച്ചു | Malayalam Kids Rhymes | Kerala Nadan Pattu Folk Song”",
+      "uploadDate": "2025-11-04T20:23:49Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/fizCRfeCQxE/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=fizCRfeCQxE",
+      "interactionStatistic": [
         {
-          "@type": "Organization",
-          "@id": "https://icodeforpassion.github.io/ambambokili/#organization",
-          "name": "Ambambo Kili",
-          "url": "https://icodeforpassion.github.io/ambambokili/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://icodeforpassion.github.io/ambambokili/assets/ambambo-thumbnail.jpg",
-            "width": 1200,
-            "height": 675
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
           },
-          "sameAs": [
-            "https://www.youtube.com/@AmbamboKili"
-          ]
+          "userInteractionCount": 1879
         },
         {
-          "@type": "WebSite",
-          "@id": "https://icodeforpassion.github.io/ambambokili/#website",
-          "url": "https://icodeforpassion.github.io/ambambokili/",
-          "name": "Ambambo Kili",
-          "publisher": {
-            "@id": "https://icodeforpassion.github.io/ambambokili/#organization"
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
           },
-          "inLanguage": "en",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.youtube.com/results?search_query={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "പൂങ്കാറ്റേ മെല്ലെ വീശൂ 🌙 | Melodic Malayalam Lullaby | Ambambo Kili | Baby Sleep Song",
+      "uploadDate": "2025-11-02T01:01:31Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/I940lZ0kdP4/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=I940lZ0kdP4",
+      "interactionStatistic": [
         {
-          "@type": "CollectionPage",
-          "@id": "https://icodeforpassion.github.io/ambambokili/videos/#collection",
-          "url": "https://icodeforpassion.github.io/ambambokili/videos/",
-          "name": "Ambambo Kili Malayalam Kids Songs Video Library",
-          "description": "Browse Malayalam lullabies, kids songs, folk dance performances, and action rhymes from Ambambo Kili's YouTube channel.",
-          "isPartOf": {
-            "@id": "https://icodeforpassion.github.io/ambambokili/#website"
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
           },
-          "hasPart": [
-            {
-              "@id": "https://www.youtube.com/watch?v=PwLja9dkXzE"
-            },
-            {
-              "@id": "https://www.youtube.com/watch?v=Q7XSyvbV-q0"
-            },
-            {
-              "@id": "https://www.youtube.com/watch?v=GfM0cftOJ3k"
-            },
-            {
-              "@id": "https://www.youtube.com/watch?v=DCA1DYbhA-M"
-            },
-            {
-              "@id": "https://www.youtube.com/watch?v=tCq9EGqlA3U"
-            }
-          ]
+          "userInteractionCount": 10323
         },
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://icodeforpassion.github.io/ambambokili/videos/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://icodeforpassion.github.io/ambambokili/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Video library",
-              "item": "https://icodeforpassion.github.io/ambambokili/videos/"
-            }
-          ]
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "ഈ വല്ലിയിൽ നിന്നു ചെമ്മേ പൂക്കൾ 🌸 Full Version | Malayalam Kids Poem  | Children’s Melody",
+      "uploadDate": "2025-11-01T02:28:44Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/SJNgDB9vn1o/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=SJNgDB9vn1o",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 22226
         },
         {
-          "@type": "ItemList",
-          "@id": "https://icodeforpassion.github.io/ambambokili/videos/#featured-list",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "VideoObject",
-                "@id": "https://www.youtube.com/watch?v=PwLja9dkXzE",
-                "name": "Baby Baby Karayalle | Feelings Song for Toddlers",
-                "description": "A comforting tune helps toddlers name emotions and calm their minds.",
-                "thumbnailUrl": "https://img.youtube.com/vi/PwLja9dkXzE/maxresdefault.jpg",
-                "uploadDate": "2025-06-14",
-                "duration": "PT3M05S",
-                "embedUrl": "https://www.youtube.com/embed/PwLja9dkXzE"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "VideoObject",
-                "@id": "https://www.youtube.com/watch?v=Q7XSyvbV-q0",
-                "name": "Ambiliyammavaa | Full Moon Lullaby Malayalam Cartoon",
-                "description": "A gentle lullaby about Ambili Amma and the moonlit courtyard of Kerala nights.",
-                "thumbnailUrl": "https://img.youtube.com/vi/Q7XSyvbV-q0/maxresdefault.jpg",
-                "uploadDate": "2025-01-12",
-                "duration": "PT4M12S",
-                "embedUrl": "https://www.youtube.com/embed/Q7XSyvbV-q0"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "VideoObject",
-                "@id": "https://www.youtube.com/watch?v=GfM0cftOJ3k",
-                "name": "Onnanam Kochu Thumbi | Nature Dance Song",
-                "description": "Butterfly friends teach graceful Malayalam dance steps in a garden fiesta.",
-                "thumbnailUrl": "https://img.youtube.com/vi/GfM0cftOJ3k/maxresdefault.jpg",
-                "uploadDate": "2025-02-05",
-                "duration": "PT3M58S",
-                "embedUrl": "https://www.youtube.com/embed/GfM0cftOJ3k"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "VideoObject",
-                "@id": "https://www.youtube.com/watch?v=DCA1DYbhA-M",
-                "name": "Koo Koo Theevandi | Train Ride Rhythm",
-                "description": "A rhythmic train journey teaches patterns, safety, and Malayalam beats.",
-                "thumbnailUrl": "https://img.youtube.com/vi/DCA1DYbhA-M/maxresdefault.jpg",
-                "uploadDate": "2025-09-18",
-                "duration": "PT4M45S",
-                "embedUrl": "https://www.youtube.com/embed/DCA1DYbhA-M"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 5,
-              "item": {
-                "@type": "VideoObject",
-                "@id": "https://www.youtube.com/watch?v=tCq9EGqlA3U",
-                "name": "Pachakkari Song | Vegetable Market Carnival",
-                "description": "A catchy market rhyme teaches Malayalam names of vegetables and helpful habits.",
-                "thumbnailUrl": "https://img.youtube.com/vi/tCq9EGqlA3U/maxresdefault.jpg",
-                "uploadDate": "2025-04-10",
-                "duration": "PT4M21S",
-                "embedUrl": "https://www.youtube.com/embed/tCq9EGqlA3U"
-              }
-            }
-          ]
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "ഈ വല്ലിയിൽ നിന്നു ചെമ്മേ പൂക്കൾ 🌸 | Malayalam Kids Poem  | Children’s Melody 2025#melodykids",
+      "uploadDate": "2025-10-30T21:49:46Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/pKjLHUERnew/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=pKjLHUERnew",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 20058
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://icodeforpassion.github.io/ambambokili/videos/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How do I find Malayalam lullabies quickly?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Use the search bar to filter for lullaby tags or open the Malayalam kids songs playlist to stream bedtime-ready tracks."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What videos work for Malayalam kids action songs?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Select the LKG and UKG category chips to reveal energetic action songs like Koo Koo Theevandi and Onnanam Kochu Thumbi."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I download keywords for Malayalam folk songs?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Visit the SEO resources link to grab keyword checklists for Malayalam folk songs, lullabies, and kids dance performances."
-              }
-            }
-          ]
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Maamaka 🌼 Malayalam Tharattu Pattu | Baby Sleeping Lullaby 2025 | Soothing Kids Song",
+      "uploadDate": "2025-10-30T18:39:38Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/T2_gz9xfzd4/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=T2_gz9xfzd4",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 357
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🐬 ಡಾಲ್ಫಿನ್ ಹುಟ್ಟುಹಬ್ಬದ ಹಾಡು 🎂 | Dolphin Birthday Song | Kannada Kids Song 2025 🎶",
+      "uploadDate": "2025-10-29T16:25:16Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/Q2dd87qClrg/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Q2dd87qClrg",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 1113
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🐬 డాల్ఫిన్ పుట్టినరోజు పాట 🎂 | Dolphin Birthday Song | Telugu Kids Song 2025 🎶",
+      "uploadDate": "2025-10-29T16:16:32Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/jeoUawmjqZs/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=jeoUawmjqZs",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 1763
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "👩‍🍼മലയാളം താരാട്ട് പാട്ട് 🎵 Lullaby Malayalam for baby sleep#malayalamlullaby",
+      "uploadDate": "2025-10-29T11:40:02Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/qSVy0ve0q2o/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=qSVy0ve0q2o",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 3317
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🌙 കൊച്ചു നക്ഷത്രമേ ✨ | Little Star Meets Girl| Malayalam Kids Dance Song | 3D Malayalam Rhyme 2025",
+      "uploadDate": "2025-10-27T10:33:08Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/CtsF20Kcp4I/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=CtsF20Kcp4I",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 2069
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "✨ A little girl meets a glowing star in a Kerala night sky! 🌙💛 🌸#malayalamkidssongs",
+      "uploadDate": "2025-10-27T02:21:35Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/FmaUjli4pFs/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=FmaUjli4pFs",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 53
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🐬 டால்பின் பிறந்தநாள் பாடல் | Dolphin Birthday Song | Tamil Kids Song 2025 🎂🎶",
+      "uploadDate": "2025-10-26T14:47:40Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/ZBG9_P7B69Q/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ZBG9_P7B69Q",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 1777
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🌸 ഓന്നാനം കുഞ്ഞുതുമ്പി | Onnanam Kochu Thumbi | Malayalam Kids Dance Song | LKG Nursery Rhyme 2025",
+      "uploadDate": "2025-10-26T12:54:59Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/GfM0cftOJ3k/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=GfM0cftOJ3k",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 2216
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "കൂ കൂ തീവണ്ടി 🚂 | Koo Koo Theevandi | Malayalam Train Song for Kids | Travel Rhyme 2025 |AmbamboKili",
+      "uploadDate": "2025-10-26T00:27:19Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/DCA1DYbhA-M/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=DCA1DYbhA-M",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 615
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🐬🎂 ഡോൾഫിൻ്റെ പിറന്നാൾ party| Dolphin’s Birthday with Friends | Malayalam Kids Cartoon Song 2025 🐘🌊",
+      "uploadDate": "2025-10-25T16:19:09Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/3gq2x3q5Z0A/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=3gq2x3q5Z0A",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 4551
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "ഒന്നാനാം കൊച്ചു തുമ്പി 🐝🌸 | Onnanam Kochu Thumbi | Malayalam Kids Song 2025 🎶 | Kerala Cartoon |",
+      "uploadDate": "2025-10-24T17:21:30Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/PUadTgK9ygQ/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=PUadTgK9ygQ",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 11101
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "ഒന്നാനാം കൊച്ചു തുമ്പി പുതിയ ഭാവത്തിൽ 🐝🌸 | Onnanam Kochu Thumbi – Malayalam Kids Song 2025 🎶",
+      "uploadDate": "2025-10-24T17:42:15Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/dYxccgkwBuc/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=dYxccgkwBuc",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 655
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🌟 | Kochu Nakshathrame| Singalong|Malayalam Kids Song 💫  | New 2025 Children’s Folk Song 🎶",
+      "uploadDate": "2025-10-24T11:31:04Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/DhjQf11BsiQ/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=DhjQf11BsiQ",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 266
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Baby Baby Karayalle | Cute Malayalam Kids Song | Fun🎵✨ #MalayalamKidsSong #ActionSong #lkgstudents",
+      "uploadDate": "2025-10-24T20:55:19Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/wDeSSOWwu2M/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=wDeSSOWwu2M",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 75
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Kuttikkali | Malayalam Action Song for Kids | Fun Dance Song for LKG & KG Students 💃✨",
+      "uploadDate": "2025-10-24T21:00:47Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/GIy1l_givwg/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=GIy1l_givwg",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 77
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "പച്ചക്കറി പാട്ട് | Pachakkari Song | Malayalam Vegetable Song for Kids | Kerala Children’s Rhyme🍅🥕🥦",
+      "uploadDate": "2025-10-23T23:58:37Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/tCq9EGqlA3U/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=tCq9EGqlA3U",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 1727
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Ambiliyammavaa 🌜 | Malayalam Kids Lullaby Song | അമ്പിളിയമ്മാവാ | Night Animation for Children",
+      "uploadDate": "2025-10-23T22:47:17Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/Q7XSyvbV-q0/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Q7XSyvbV-q0",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 2536
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Baby Baby Karayalle 🍼 | വീട്ടിലെ മധുരപ്പാട്ട് | Malayalam Kids Song | Kerala Family anim | 3D 🎶",
+      "uploadDate": "2025-10-22T00:26:59Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/gsNjW-JD-AU/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=gsNjW-JD-AU",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 364
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🦜 പച്ച തത്ത പാട്ട് | Parrot Song | Malayalam Kids Folk Song | Kerala Paddy Fields Animation 🌾🎶",
+      "uploadDate": "2025-10-22T22:06:52Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/HnE3hREUIoo/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=HnE3hREUIoo",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 1970
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "നിന്ന് കളിക്കാം കളിക്കാം 🪘 | Ninn Kalikkam Kalikkam  | Naadan Paattu | Kerala Children Song 🌴🎶",
+      "uploadDate": "2025-10-22T22:08:51Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/3TldU_KNcgQ/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=3TldU_KNcgQ",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 171
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "“Little Kerala Dancer 💃 | Malayalam Kids Folk Song | Kerala Village Dance” 💃",
+      "uploadDate": "2025-10-22T20:29:43Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/dpFxwz9EY1Q/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=dpFxwz9EY1Q",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 70
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Veetumuttathe Praavukal 🕊️ | Malayalam Kids Village Song 2025 | Kids Kerala Cartoon | Praavu Paattu",
+      "uploadDate": "2025-10-21T23:48:20Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/s5DvXuPxj80/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=s5DvXuPxj80",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 528
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "കാട്ടിലെ കൂട്ടുകാർ 🦁🐘 | Kaattile Koottukar | Malayalam Jungle Story for Kids | Moral Cartoon 2025",
+      "uploadDate": "2025-10-21T22:54:24Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/DGVczRLH7pI/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=DGVczRLH7pI",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 526
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "🏫 സ്കൂൾ ടൈം | School Time Malayalam Kids Song മലയാളം കുട്ടികളുടെ പാട്ട് | FunnyClassroom Song🚌👨‍🏫🧑‍🏫",
+      "uploadDate": "2025-10-21T17:39:24Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/JefQTELLKYw/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=JefQTELLKYw",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 318
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Baby Baby Karayalle 🍼 | Malayalam Family Song for Kids 2025 | Cute Kerala Cartoon 🎶",
+      "uploadDate": "2025-10-28T08:18:13Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/-EnD0WE1lKk/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=-EnD0WE1lKk",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 287
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
+        }
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "name": "ബേബി ബേബി കരയല്ലേ 🍼 | Baby Baby Karayalle | Malayalam Kids Song 2025 🎶 | Kerala Cartoon",
+      "uploadDate": "2025-10-28T00:03:36Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/PwLja9dkXzE/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=PwLja9dkXzE",
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "WatchAction"
+          },
+          "userInteractionCount": 3381
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": {
+            "@type": "LikeAction"
+          },
+          "userInteractionCount": 0
         }
       ]
     }
+  ]
+}
   </script>
 </head>
-<body data-page="videos">
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="site-header" role="banner">
-    <div class="container nav-container">
-      <a class="logo" href="/ambambokili/">Ambambo Kili</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="/ambambokili/">Home</a></li>
-          <li><a class="active" href="/ambambokili/videos/">Videos</a></li>
-          <li><a href="/ambambokili/categories/">Categories</a></li>
-          <li><a href="/ambambokili/blog/">Blog</a></li>
-          <li><a href="/ambambokili/about/">About</a></li>
-          <li><a class="subscribe-link" href="https://www.youtube.com/@AmbamboKili">Subscribe</a></li>
-        </ul>
-      </nav>
-    </div>
+<body>
+  <header>
+    <h1>🎵 Ambambo Kili Malayalam Kids Songs – Video Gallery</h1>
+    <p>Welcome to Ambambo Kili’s Video Gallery — a joyful collection of Malayalam, Tamil, Telugu, and Kannada kids’ songs that celebrate Kerala’s rhythm, culture, and imagination.</p>
   </header>
-  <main id="main-content" class="container">
-    <header class="page-header">
-      <h1>All videos</h1>
-      <p>Search, filter, and discover Malayalam kids songs, stories, and playful cartoons.</p>
-    </header>
-    <section class="featured-video" aria-labelledby="videos-featured-heading">
-      <div class="featured-video-grid">
-        <div class="featured-video-text">
-          <p class="eyebrow">Now streaming</p>
-          <h2 id="videos-featured-heading">ഈ വള്ളിയിൽ നിന്നു ചെമ്മേ പൂക്കൾ 🌸 Full Version</h2>
-          <p>
-            Explore the extended cut of our countryside rhyme, complete with new verses, lush animations,
-            and gentle percussion that keeps young singers clapping in rhythm. Share it in classrooms or
-            cozy family evenings.
-          </p>
-          <a class="btn primary" href="https://www.youtube.com/watch?v=SJNgDB9vn1o">Play on YouTube</a>
-        </div>
-        <div class="featured-video-player">
-          <div class="responsive-embed">
-            <iframe src="https://www.youtube.com/embed/SJNgDB9vn1o" title="ഈ വള്ളിയിൽ നിന്നു ചെമ്മേ പൂക്കൾ – Full Version" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <!-- Stats updated manually by Python script via JSON refresh. -->
+  <main>
+    <section class="video-grid">
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/fizCRfeCQxE/hqdefault.jpg" alt="“വള്ളത്തിങ്കൽ താളമടിച്ചു | Malayalam Kids Rhymes | Kerala Nadan Pattu Folk Song” thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=fizCRfeCQxE" target="_blank" rel="noopener">“വള്ളത്തിങ്കൽ താളമടിച്ചു | Malayalam Kids Rhymes | Kerala Nadan Pattu Folk Song”</a></h2>
+          <div class="video-meta">
+            <span>Published: 04 Nov 2025</span>
+            <span>Views: 1,879</span>
+            <span>Likes: 0</span>
           </div>
         </div>
-      </div>
-    </section>
-    <form class="filters" role="search">
-      <label for="video-search" class="visually-hidden">Search videos</label>
-      <input id="video-search" type="search" placeholder="Search by title or tag" autocomplete="off">
-      <div id="category-chips" class="chips" role="listbox" aria-label="Filter by category"></div>
-    </form>
-    <div id="videos-list" class="video-grid" aria-live="polite"></div>
-    <nav class="pagination" aria-label="Videos pagination">
-      <button id="prev-page" disabled>Previous</button>
-      <span id="pagination-status" aria-live="polite"></span>
-      <button id="next-page" disabled>Next</button>
-    </nav>
-    <section class="video-keyword-guide" aria-label="Malayalam keyword guide">
-      <p>
-        Use the search box to quickly locate playlists for <strong>malayalam action song for kg students</strong>, rehearse a <strong>malayalam solo dance performance</strong>, or plan a <strong>malayalam folk dance for lkg students</strong> with our curated videos.
-      </p>
-      <p>
-        Parents can also queue up favorites for a <strong>malayalam song school girl dance</strong>, stage-friendly <strong>cartoon song malayalam short</strong> numbers, or an energetic <strong>kerala new dance performance</strong> inspired by trending <strong>malayalam rhymes for babies</strong>.
-      </p>
-      <p>
-        Bookmark this page to surface quickly for searches such as <strong>malayalam lullabies for babies</strong>, <strong>kids songs to dance Malayalam</strong>, and <strong>Malayalam folk songs for kids</strong>. Every click drives watch time on the <a href="https://www.youtube.com/@AmbamboKili">Ambambo Kili YouTube channel</a>.
-      </p>
-    </section>
-    <section class="video-resource" aria-labelledby="video-resource-heading">
-      <h2 id="video-resource-heading">Grow your Malayalam kids song visibility</h2>
-      <ul>
-        <li>Download keyword checklists from the <a href="/ambambokili/blog/malayalam-kids-songs-seo-guide/">Malayalam kids songs SEO guide</a>.</li>
-        <li>Share lullaby playlists with preschool WhatsApp groups so Ambambo Kili ranks for “children’s song to sleep Malayalam”.</li>
-        <li>Embed action song videos like <em>Koo Koo Theevandi</em> on school blogs to dominate “Malayalam kids action song” results.</li>
-        <li>Link folk tales such as <em>Kaattile Koottukar</em> from culture hubs to win “Malayalam folk songs for kids”.</li>
-      </ul>
-    </section>
-    <section class="faq" aria-labelledby="video-faq-heading">
-      <h2 id="video-faq-heading">Video library FAQs</h2>
-      <div class="faq-list">
-        <details>
-          <summary>How do I find Malayalam lullabies quickly?</summary>
-          <p>Type “lullaby” in the search bar or open the Malayalam kids songs playlist to stream bedtime-ready tracks like Ambiliyammavaa and Baby Baby Karayalle.</p>
-        </details>
-        <details>
-          <summary>What videos work for Malayalam kids action songs?</summary>
-          <p>Select the LKG or dance category chips to reveal energetic action songs such as Koo Koo Theevandi and Onnanam Kochu Thumbi.</p>
-        </details>
-        <details>
-          <summary>Can I download keywords for Malayalam folk songs?</summary>
-          <p>Yes. Visit our SEO resources and blog posts to grab keyword checklists tailored for Malayalam folk songs, lullabies, and kids dance performances.</p>
-        </details>
-      </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/I940lZ0kdP4/hqdefault.jpg" alt="പൂങ്കാറ്റേ മെല്ലെ വീശൂ 🌙 | Melodic Malayalam Lullaby | Ambambo Kili | Baby Sleep Song thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=I940lZ0kdP4" target="_blank" rel="noopener">പൂങ്കാറ്റേ മെല്ലെ വീശൂ 🌙 | Melodic Malayalam Lullaby | Ambambo Kili | Baby Sleep Song</a></h2>
+          <div class="video-meta">
+            <span>Published: 02 Nov 2025</span>
+            <span>Views: 10,323</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/SJNgDB9vn1o/hqdefault.jpg" alt="ഈ വല്ലിയിൽ നിന്നു ചെമ്മേ പൂക്കൾ 🌸 Full Version | Malayalam Kids Poem  | Children’s Melody thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=SJNgDB9vn1o" target="_blank" rel="noopener">ഈ വല്ലിയിൽ നിന്നു ചെമ്മേ പൂക്കൾ 🌸 Full Version | Malayalam Kids Poem  | Children’s Melody</a></h2>
+          <div class="video-meta">
+            <span>Published: 01 Nov 2025</span>
+            <span>Views: 22,226</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/pKjLHUERnew/hqdefault.jpg" alt="ഈ വല്ലിയിൽ നിന്നു ചെമ്മേ പൂക്കൾ 🌸 | Malayalam Kids Poem  | Children’s Melody 2025#melodykids thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=pKjLHUERnew" target="_blank" rel="noopener">ഈ വല്ലിയിൽ നിന്നു ചെമ്മേ പൂക്കൾ 🌸 | Malayalam Kids Poem  | Children’s Melody 2025#melodykids</a></h2>
+          <div class="video-meta">
+            <span>Published: 30 Oct 2025</span>
+            <span>Views: 20,058</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/T2_gz9xfzd4/hqdefault.jpg" alt="Maamaka 🌼 Malayalam Tharattu Pattu | Baby Sleeping Lullaby 2025 | Soothing Kids Song thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=T2_gz9xfzd4" target="_blank" rel="noopener">Maamaka 🌼 Malayalam Tharattu Pattu | Baby Sleeping Lullaby 2025 | Soothing Kids Song</a></h2>
+          <div class="video-meta">
+            <span>Published: 30 Oct 2025</span>
+            <span>Views: 357</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/Q2dd87qClrg/hqdefault.jpg" alt="🐬 ಡಾಲ್ಫಿನ್ ಹುಟ್ಟುಹಬ್ಬದ ಹಾಡು 🎂 | Dolphin Birthday Song | Kannada Kids Song 2025 🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=Q2dd87qClrg" target="_blank" rel="noopener">🐬 ಡಾಲ್ಫಿನ್ ಹುಟ್ಟುಹಬ್ಬದ ಹಾಡು 🎂 | Dolphin Birthday Song | Kannada Kids Song 2025 🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 29 Oct 2025</span>
+            <span>Views: 1,113</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/jeoUawmjqZs/hqdefault.jpg" alt="🐬 డాల్ఫిన్ పుట్టినరోజు పాట 🎂 | Dolphin Birthday Song | Telugu Kids Song 2025 🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=jeoUawmjqZs" target="_blank" rel="noopener">🐬 డాల్ఫిన్ పుట్టినరోజు పాట 🎂 | Dolphin Birthday Song | Telugu Kids Song 2025 🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 29 Oct 2025</span>
+            <span>Views: 1,763</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/qSVy0ve0q2o/hqdefault.jpg" alt="👩‍🍼മലയാളം താരാട്ട് പാട്ട് 🎵 Lullaby Malayalam for baby sleep#malayalamlullaby thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=qSVy0ve0q2o" target="_blank" rel="noopener">👩‍🍼മലയാളം താരാട്ട് പാട്ട് 🎵 Lullaby Malayalam for baby sleep#malayalamlullaby</a></h2>
+          <div class="video-meta">
+            <span>Published: 29 Oct 2025</span>
+            <span>Views: 3,317</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/CtsF20Kcp4I/hqdefault.jpg" alt="🌙 കൊച്ചു നക്ഷത്രമേ ✨ | Little Star Meets Girl| Malayalam Kids Dance Song | 3D Malayalam Rhyme 2025 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=CtsF20Kcp4I" target="_blank" rel="noopener">🌙 കൊച്ചു നക്ഷത്രമേ ✨ | Little Star Meets Girl| Malayalam Kids Dance Song | 3D Malayalam Rhyme 2025</a></h2>
+          <div class="video-meta">
+            <span>Published: 27 Oct 2025</span>
+            <span>Views: 2,069</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/FmaUjli4pFs/hqdefault.jpg" alt="✨ A little girl meets a glowing star in a Kerala night sky! 🌙💛 🌸#malayalamkidssongs thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=FmaUjli4pFs" target="_blank" rel="noopener">✨ A little girl meets a glowing star in a Kerala night sky! 🌙💛 🌸#malayalamkidssongs</a></h2>
+          <div class="video-meta">
+            <span>Published: 27 Oct 2025</span>
+            <span>Views: 53</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/ZBG9_P7B69Q/hqdefault.jpg" alt="🐬 டால்பின் பிறந்தநாள் பாடல் | Dolphin Birthday Song | Tamil Kids Song 2025 🎂🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=ZBG9_P7B69Q" target="_blank" rel="noopener">🐬 டால்பின் பிறந்தநாள் பாடல் | Dolphin Birthday Song | Tamil Kids Song 2025 🎂🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 26 Oct 2025</span>
+            <span>Views: 1,777</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/GfM0cftOJ3k/hqdefault.jpg" alt="🌸 ഓന്നാനം കുഞ്ഞുതുമ്പി | Onnanam Kochu Thumbi | Malayalam Kids Dance Song | LKG Nursery Rhyme 2025 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=GfM0cftOJ3k" target="_blank" rel="noopener">🌸 ഓന്നാനം കുഞ്ഞുതുമ്പി | Onnanam Kochu Thumbi | Malayalam Kids Dance Song | LKG Nursery Rhyme 2025</a></h2>
+          <div class="video-meta">
+            <span>Published: 26 Oct 2025</span>
+            <span>Views: 2,216</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/DCA1DYbhA-M/hqdefault.jpg" alt="കൂ കൂ തീവണ്ടി 🚂 | Koo Koo Theevandi | Malayalam Train Song for Kids | Travel Rhyme 2025 |AmbamboKili thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=DCA1DYbhA-M" target="_blank" rel="noopener">കൂ കൂ തീവണ്ടി 🚂 | Koo Koo Theevandi | Malayalam Train Song for Kids | Travel Rhyme 2025 |AmbamboKili</a></h2>
+          <div class="video-meta">
+            <span>Published: 26 Oct 2025</span>
+            <span>Views: 615</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/3gq2x3q5Z0A/hqdefault.jpg" alt="🐬🎂 ഡോൾഫിൻ്റെ പിറന്നാൾ party| Dolphin’s Birthday with Friends | Malayalam Kids Cartoon Song 2025 🐘🌊 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=3gq2x3q5Z0A" target="_blank" rel="noopener">🐬🎂 ഡോൾഫിൻ്റെ പിറന്നാൾ party| Dolphin’s Birthday with Friends | Malayalam Kids Cartoon Song 2025 🐘🌊</a></h2>
+          <div class="video-meta">
+            <span>Published: 25 Oct 2025</span>
+            <span>Views: 4,551</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/PUadTgK9ygQ/hqdefault.jpg" alt="ഒന്നാനാം കൊച്ചു തുമ്പി 🐝🌸 | Onnanam Kochu Thumbi | Malayalam Kids Song 2025 🎶 | Kerala Cartoon | thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=PUadTgK9ygQ" target="_blank" rel="noopener">ഒന്നാനാം കൊച്ചു തുമ്പി 🐝🌸 | Onnanam Kochu Thumbi | Malayalam Kids Song 2025 🎶 | Kerala Cartoon |</a></h2>
+          <div class="video-meta">
+            <span>Published: 24 Oct 2025</span>
+            <span>Views: 11,101</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/dYxccgkwBuc/hqdefault.jpg" alt="ഒന്നാനാം കൊച്ചു തുമ്പി പുതിയ ഭാവത്തിൽ 🐝🌸 | Onnanam Kochu Thumbi – Malayalam Kids Song 2025 🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=dYxccgkwBuc" target="_blank" rel="noopener">ഒന്നാനാം കൊച്ചു തുമ്പി പുതിയ ഭാവത്തിൽ 🐝🌸 | Onnanam Kochu Thumbi – Malayalam Kids Song 2025 🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 24 Oct 2025</span>
+            <span>Views: 655</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/DhjQf11BsiQ/hqdefault.jpg" alt="🌟 | Kochu Nakshathrame| Singalong|Malayalam Kids Song 💫  | New 2025 Children’s Folk Song 🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=DhjQf11BsiQ" target="_blank" rel="noopener">🌟 | Kochu Nakshathrame| Singalong|Malayalam Kids Song 💫  | New 2025 Children’s Folk Song 🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 24 Oct 2025</span>
+            <span>Views: 266</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/wDeSSOWwu2M/hqdefault.jpg" alt="Baby Baby Karayalle | Cute Malayalam Kids Song | Fun🎵✨ #MalayalamKidsSong #ActionSong #lkgstudents thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=wDeSSOWwu2M" target="_blank" rel="noopener">Baby Baby Karayalle | Cute Malayalam Kids Song | Fun🎵✨ #MalayalamKidsSong #ActionSong #lkgstudents</a></h2>
+          <div class="video-meta">
+            <span>Published: 24 Oct 2025</span>
+            <span>Views: 75</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/GIy1l_givwg/hqdefault.jpg" alt="Kuttikkali | Malayalam Action Song for Kids | Fun Dance Song for LKG &amp; KG Students 💃✨ thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=GIy1l_givwg" target="_blank" rel="noopener">Kuttikkali | Malayalam Action Song for Kids | Fun Dance Song for LKG &amp; KG Students 💃✨</a></h2>
+          <div class="video-meta">
+            <span>Published: 24 Oct 2025</span>
+            <span>Views: 77</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/tCq9EGqlA3U/hqdefault.jpg" alt="പച്ചക്കറി പാട്ട് | Pachakkari Song | Malayalam Vegetable Song for Kids | Kerala Children’s Rhyme🍅🥕🥦 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=tCq9EGqlA3U" target="_blank" rel="noopener">പച്ചക്കറി പാട്ട് | Pachakkari Song | Malayalam Vegetable Song for Kids | Kerala Children’s Rhyme🍅🥕🥦</a></h2>
+          <div class="video-meta">
+            <span>Published: 23 Oct 2025</span>
+            <span>Views: 1,727</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/Q7XSyvbV-q0/hqdefault.jpg" alt="Ambiliyammavaa 🌜 | Malayalam Kids Lullaby Song | അമ്പിളിയമ്മാവാ | Night Animation for Children thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=Q7XSyvbV-q0" target="_blank" rel="noopener">Ambiliyammavaa 🌜 | Malayalam Kids Lullaby Song | അമ്പിളിയമ്മാവാ | Night Animation for Children</a></h2>
+          <div class="video-meta">
+            <span>Published: 23 Oct 2025</span>
+            <span>Views: 2,536</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/gsNjW-JD-AU/hqdefault.jpg" alt="Baby Baby Karayalle 🍼 | വീട്ടിലെ മധുരപ്പാട്ട് | Malayalam Kids Song | Kerala Family anim | 3D 🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=gsNjW-JD-AU" target="_blank" rel="noopener">Baby Baby Karayalle 🍼 | വീട്ടിലെ മധുരപ്പാട്ട് | Malayalam Kids Song | Kerala Family anim | 3D 🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 22 Oct 2025</span>
+            <span>Views: 364</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/HnE3hREUIoo/hqdefault.jpg" alt="🦜 പച്ച തത്ത പാട്ട് | Parrot Song | Malayalam Kids Folk Song | Kerala Paddy Fields Animation 🌾🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=HnE3hREUIoo" target="_blank" rel="noopener">🦜 പച്ച തത്ത പാട്ട് | Parrot Song | Malayalam Kids Folk Song | Kerala Paddy Fields Animation 🌾🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 22 Oct 2025</span>
+            <span>Views: 1,970</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/3TldU_KNcgQ/hqdefault.jpg" alt="നിന്ന് കളിക്കാം കളിക്കാം 🪘 | Ninn Kalikkam Kalikkam  | Naadan Paattu | Kerala Children Song 🌴🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=3TldU_KNcgQ" target="_blank" rel="noopener">നിന്ന് കളിക്കാം കളിക്കാം 🪘 | Ninn Kalikkam Kalikkam  | Naadan Paattu | Kerala Children Song 🌴🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 22 Oct 2025</span>
+            <span>Views: 171</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/dpFxwz9EY1Q/hqdefault.jpg" alt="“Little Kerala Dancer 💃 | Malayalam Kids Folk Song | Kerala Village Dance” 💃 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=dpFxwz9EY1Q" target="_blank" rel="noopener">“Little Kerala Dancer 💃 | Malayalam Kids Folk Song | Kerala Village Dance” 💃</a></h2>
+          <div class="video-meta">
+            <span>Published: 22 Oct 2025</span>
+            <span>Views: 70</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/s5DvXuPxj80/hqdefault.jpg" alt="Veetumuttathe Praavukal 🕊️ | Malayalam Kids Village Song 2025 | Kids Kerala Cartoon | Praavu Paattu thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=s5DvXuPxj80" target="_blank" rel="noopener">Veetumuttathe Praavukal 🕊️ | Malayalam Kids Village Song 2025 | Kids Kerala Cartoon | Praavu Paattu</a></h2>
+          <div class="video-meta">
+            <span>Published: 21 Oct 2025</span>
+            <span>Views: 528</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/DGVczRLH7pI/hqdefault.jpg" alt="കാട്ടിലെ കൂട്ടുകാർ 🦁🐘 | Kaattile Koottukar | Malayalam Jungle Story for Kids | Moral Cartoon 2025 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=DGVczRLH7pI" target="_blank" rel="noopener">കാട്ടിലെ കൂട്ടുകാർ 🦁🐘 | Kaattile Koottukar | Malayalam Jungle Story for Kids | Moral Cartoon 2025</a></h2>
+          <div class="video-meta">
+            <span>Published: 21 Oct 2025</span>
+            <span>Views: 526</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/JefQTELLKYw/hqdefault.jpg" alt="🏫 സ്കൂൾ ടൈം | School Time Malayalam Kids Song മലയാളം കുട്ടികളുടെ പാട്ട് | FunnyClassroom Song🚌👨‍🏫🧑‍🏫 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=JefQTELLKYw" target="_blank" rel="noopener">🏫 സ്കൂൾ ടൈം | School Time Malayalam Kids Song മലയാളം കുട്ടികളുടെ പാട്ട് | FunnyClassroom Song🚌👨‍🏫🧑‍🏫</a></h2>
+          <div class="video-meta">
+            <span>Published: 21 Oct 2025</span>
+            <span>Views: 318</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/-EnD0WE1lKk/hqdefault.jpg" alt="Baby Baby Karayalle 🍼 | Malayalam Family Song for Kids 2025 | Cute Kerala Cartoon 🎶 thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=-EnD0WE1lKk" target="_blank" rel="noopener">Baby Baby Karayalle 🍼 | Malayalam Family Song for Kids 2025 | Cute Kerala Cartoon 🎶</a></h2>
+          <div class="video-meta">
+            <span>Published: 28 Oct 2025</span>
+            <span>Views: 287</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
+      <article class="video-card">
+        <figure>
+          <img src="https://img.youtube.com/vi/PwLja9dkXzE/hqdefault.jpg" alt="ബേബി ബേബി കരയല്ലേ 🍼 | Baby Baby Karayalle | Malayalam Kids Song 2025 🎶 | Kerala Cartoon thumbnail" loading="lazy">
+        </figure>
+        <div class="video-content">
+          <h2><a href="https://www.youtube.com/watch?v=PwLja9dkXzE" target="_blank" rel="noopener">ബേബി ബേബി കരയല്ലേ 🍼 | Baby Baby Karayalle | Malayalam Kids Song 2025 🎶 | Kerala Cartoon</a></h2>
+          <div class="video-meta">
+            <span>Published: 28 Oct 2025</span>
+            <span>Views: 3,381</span>
+            <span>Likes: 0</span>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div>
-        <h3>Ambambo Kili</h3>
-        <p>Malayalam kids songs, stories, and Kerala cartoons.</p>
-        <p>&copy; <span id="footer-year"></span> Ambambo Kili. All rights reserved.</p>
-      </div>
-      <div>
-        <h4>Quick links</h4>
-        <ul>
-          <li><a href="/ambambokili/">Home</a></li>
-          <li><a href="/ambambokili/videos/">Videos</a></li>
-          <li><a href="/ambambokili/categories/">Categories</a></li>
-          <li><a href="/ambambokili/blog/">Blog</a></li>
-          <li><a href="/ambambokili/about/">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p><a href="mailto:hello@ambambokili.example">hello@ambambokili.example</a></p>
-        <p><a href="https://www.youtube.com/@AmbamboKili">YouTube channel</a></p>
-      </div>
-    </div>
+  <footer class="footer-note">
+    <p>Subscribe to <a href="https://www.youtube.com/@AmbamboKili" target="_blank" rel="noopener">Ambambo Kili on YouTube</a> for new songs every week!</p>
   </footer>
 </body>
 </html>

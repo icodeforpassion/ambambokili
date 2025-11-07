@@ -3,15 +3,40 @@ const CONFIG = {
   CHANNEL_TAGLINE: "Malayalam kids songs, stories, and Kerala cartoons",
   CHANNEL_URL: "https://www.youtube.com/@AmbamboKili",
   PLAYLIST_URL: "https://www.youtube.com/playlist?list=RDXqZsoesa55w",
-  SITE_URL: "https://icodeforpassion.github.io/ambambokili",
+  SITE_URL: "https://ambambokili.com",
   CONTACT_EMAIL: "hello@ambambokili.example",
-  DEFAULT_THUMB: "/ambambokili/assets/img/placeholder.jpg"
+  DEFAULT_THUMB: "assets/img/placeholder.jpg",
+  DATA_PATH: "data/videos.json"
 };
+
+const BASE_PATH = document.body?.dataset.basePath || "";
 
 const AppState = {
   videos: [],
   categories: new Map()
 };
+
+const PROTOCOL_REGEX = /^[a-z]+:/i;
+
+function resolvePath(path) {
+  if (!path) return path;
+  if (PROTOCOL_REGEX.test(path) || path.startsWith('//') || path.startsWith('#')) {
+    return path;
+  }
+  if (path.startsWith('/')) {
+    return path;
+  }
+  return `${BASE_PATH}${path}`;
+}
+
+function absoluteUrl(path) {
+  if (!path) return path;
+  if (PROTOCOL_REGEX.test(path) || path.startsWith('//')) {
+    return path;
+  }
+  const base = CONFIG.SITE_URL.endsWith('/') ? CONFIG.SITE_URL : `${CONFIG.SITE_URL}/`;
+  return `${base}${path.replace(/^\/+/, '')}`;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   setupNavToggle();
@@ -44,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadVideos() {
   if (AppState.videos.length) return AppState.videos;
   try {
-    const response = await fetch("/ambambokili/data/videos.json");
+    const response = await fetch(resolvePath(CONFIG.DATA_PATH));
     if (!response.ok) throw new Error("Failed to load videos.json");
     const data = await response.json();
     AppState.videos = data.sort((a, b) => new Date(b.published) - new Date(a.published));
@@ -111,10 +136,10 @@ function renderPopularCategories() {
       const slug = slugify(category);
       return `
         <article class="category-card">
-          <img src="${videos[0]?.thumb_url || CONFIG.DEFAULT_THUMB}" alt="${category} category" loading="lazy">
+          <img src="${videos[0]?.thumb_url || resolvePath(CONFIG.DEFAULT_THUMB)}" alt="${category} category" loading="lazy">
           <h3>${category}</h3>
           <p>${videos.length} videos</p>
-          <a class="btn primary" href="/ambambokili/categories/${slug}/">Explore ${category}</a>
+          <a class="btn primary" href="${resolvePath(`categories/${slug}/`)}">Explore ${category}</a>
         </article>`;
     })
     .join("");
@@ -218,10 +243,10 @@ function renderCategoriesIndex() {
       const slug = slugify(category);
       return `
         <article class="category-card">
-          <img src="${videos[0]?.thumb_url || CONFIG.DEFAULT_THUMB}" alt="${category} Malayalam kids songs" loading="lazy">
+          <img src="${videos[0]?.thumb_url || resolvePath(CONFIG.DEFAULT_THUMB)}" alt="${category} Malayalam kids songs" loading="lazy">
           <h3>${category}</h3>
           <p>${videos.length} joyful videos</p>
-          <a class="btn primary" href="/ambambokili/categories/${slug}/">Open ${category}</a>
+          <a class="btn primary" href="${resolvePath(`categories/${slug}/`)}">Open ${category}</a>
         </article>`;
     })
     .join("");
@@ -251,7 +276,7 @@ function renderCategoryPage(slug) {
   updateMetaTags({
     title: `${categoryName} Malayalam Kids Songs – Ambambo Kili`,
     description: `Enjoy ${videos.length} ${categoryName.toLowerCase()} themed Malayalam kids songs and cartoons from Ambambo Kili.`,
-    canonical: `${CONFIG.SITE_URL}/categories/${slug}/`
+    canonical: `categories/${slug}/`
   });
 }
 
@@ -269,10 +294,10 @@ function renderVideoPage(slug) {
   if (!main) return;
   const breadcrumbs = `
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/ambambokili/">Home</a> › <a href="/ambambokili/videos/">Videos</a> › ${video.title}
+      <a href="${resolvePath(`index.html`)}">Home</a> › <a href="${resolvePath(`videos/`)}">Videos</a> › ${video.title}
     </nav>`;
   const categories = video.categories
-    .map(category => `<a href="/ambambokili/categories/${slugify(category)}/">${category}</a>`)
+    .map(category => `<a href="${resolvePath(`categories/${slugify(category)}/`)}">${category}</a>`)
     .join(", ");
   const playlistButtons = (video.playlist_urls || [])
     .map(url => `<a class="btn" href="${url}">Open playlist</a>`)
@@ -323,7 +348,7 @@ function renderVideoPage(slug) {
       <section>
         <h2>More from Ambambo Kili</h2>
         <div class="more-links">
-          ${moreLinks.map(item => `<a href="/ambambokili/videos/${item.slug}/">Discover the ${item.title} video story</a>`).join("")}
+          ${moreLinks.map(item => `<a href="${resolvePath(`videos/${item.slug}/`)}">Discover the ${item.title} video story</a>`).join("")}
         </div>
       </section>
     </article>
@@ -332,7 +357,7 @@ function renderVideoPage(slug) {
   updateMetaTags({
     title: `${video.title} – Ambambo Kili`,
     description: `${video.description_short}`.slice(0, 157),
-    canonical: `${CONFIG.SITE_URL}/videos/${video.slug}/`,
+    canonical: `videos/${video.slug}/`,
     image: video.thumb_url,
     ogType: "video.other"
   });
@@ -365,17 +390,19 @@ function findRelatedVideos(video, count, excludeSlug = video.slug, uniquePool = 
 
 function updateMetaTags({ title, description, canonical, image, ogType = "website" }) {
   if (title) document.title = title;
+  const canonicalUrl = absoluteUrl(canonical);
+  const ogImage = absoluteUrl(image || CONFIG.DEFAULT_THUMB);
   setOrCreateMeta("name", "description", description);
-  setOrCreateLink("canonical", canonical);
+  setOrCreateLink("canonical", canonicalUrl);
   setOrCreateMeta("property", "og:title", title);
   setOrCreateMeta("property", "og:description", description);
   setOrCreateMeta("property", "og:type", ogType);
-  setOrCreateMeta("property", "og:url", canonical);
-  setOrCreateMeta("property", "og:image", image || `${CONFIG.SITE_URL}${CONFIG.DEFAULT_THUMB}`);
+  setOrCreateMeta("property", "og:url", canonicalUrl);
+  setOrCreateMeta("property", "og:image", ogImage);
   setOrCreateMeta("name", "twitter:title", title);
   setOrCreateMeta("name", "twitter:description", description);
   setOrCreateMeta("name", "twitter:card", ogType === "video.other" ? "player" : "summary_large_image");
-  setOrCreateMeta("name", "twitter:image", image || `${CONFIG.SITE_URL}${CONFIG.DEFAULT_THUMB}`);
+  setOrCreateMeta("name", "twitter:image", ogImage);
 }
 
 function setOrCreateMeta(attr, name, value) {
@@ -403,8 +430,8 @@ function setOrCreateLink(rel, href) {
 function videoCard(video) {
   return `
     <article class="video-card">
-      <a href="/ambambokili/videos/${video.slug}/">
-        <img src="${video.thumb_url || CONFIG.DEFAULT_THUMB}" alt="${video.title}" loading="lazy">
+      <a href="${resolvePath(`videos/${video.slug}/`)}">
+        <img src="${video.thumb_url || resolvePath(CONFIG.DEFAULT_THUMB)}" alt="${video.title}" loading="lazy">
         <h3>${video.title}</h3>
       </a>
       <div class="meta">
@@ -412,7 +439,7 @@ function videoCard(video) {
         <span> · ${formatDuration(video.duration)}</span>
       </div>
       <p>${video.description_short}</p>
-      <a class="btn" href="/ambambokili/videos/${video.slug}/">Open video page</a>
+      <a class="btn" href="${resolvePath(`videos/${video.slug}/`)}">Open video page</a>
     </article>`;
 }
 
@@ -478,7 +505,7 @@ function injectHomeJsonLd() {
     "url": CONFIG.SITE_URL,
     "potentialAction": {
       "@type": "SearchAction",
-      "target": `${CONFIG.SITE_URL}/videos/?q={search_term_string}`,
+      "target": absoluteUrl(`videos/?q={search_term_string}`),
       "query-input": "required name=search_term_string"
     }
   };
@@ -497,14 +524,14 @@ function injectVideoJsonLd(video) {
     "uploadDate": video.published,
     "duration": video.duration,
     "embedUrl": `https://www.youtube.com/embed/${video.yt_id}`,
-    "url": `${CONFIG.SITE_URL}/videos/${video.slug}/`,
+    "url": absoluteUrl(`videos/${video.slug}/`),
     "publisher": {
       "@type": "Organization",
       "name": CONFIG.CHANNEL_NAME,
       "url": CONFIG.CHANNEL_URL,
       "logo": {
         "@type": "ImageObject",
-        "url": `${CONFIG.SITE_URL}${CONFIG.DEFAULT_THUMB}`
+        "url": absoluteUrl(CONFIG.DEFAULT_THUMB)
       }
     }
   }, null, 2);

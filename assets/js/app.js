@@ -18,6 +18,13 @@ const AppState = {
 
 const PROTOCOL_REGEX = /^[a-z]+:/i;
 
+function formatNumber(value) {
+  if (value === undefined || value === null) {
+    return "";
+  }
+  return new Intl.NumberFormat("en-IN").format(value);
+}
+
 function resolvePath(path) {
   if (!path) return path;
   if (PROTOCOL_REGEX.test(path) || path.startsWith('//') || path.startsWith('#')) {
@@ -161,17 +168,19 @@ function renderVideosPage() {
     perPage: 12
   };
 
+  injectVideoGalleryJsonLd(AppState.videos);
+
   function applyFilters() {
     let filtered = [...AppState.videos];
     if (state.search) {
       const term = state.search.toLowerCase();
       filtered = filtered.filter(video =>
         video.title.toLowerCase().includes(term) ||
-        video.tags.some(tag => tag.toLowerCase().includes(term))
+        (Array.isArray(video.tags) && video.tags.some(tag => tag.toLowerCase().includes(term)))
       );
     }
     if (state.category) {
-      filtered = filtered.filter(video => video.categories.includes(state.category));
+      filtered = filtered.filter(video => (video.categories || []).includes(state.category));
     }
     const total = filtered.length;
     const totalPages = Math.max(1, Math.ceil(total / state.perPage));
@@ -179,7 +188,9 @@ function renderVideosPage() {
     const start = (state.page - 1) * state.perPage;
     const pageItems = filtered.slice(start, start + state.perPage);
     listContainer.innerHTML = pageItems.map(videoCard).join("");
-    statusEl.textContent = `Page ${state.page} of ${totalPages}`;
+    if (statusEl) {
+      statusEl.textContent = `Page ${state.page} of ${totalPages} · ${total} videos`;
+    }
     prevBtn.disabled = state.page <= 1;
     nextBtn.disabled = state.page >= totalPages;
     listContainer.dataset.count = total;
@@ -296,7 +307,7 @@ function renderVideoPage(slug) {
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="${resolvePath(`index.html`)}">Home</a> › <a href="${resolvePath(`videos/`)}">Videos</a> › ${video.title}
     </nav>`;
-  const categories = video.categories
+  const categories = (video.categories || [])
     .map(category => `<a href="${resolvePath(`categories/${slugify(category)}/`)}">${category}</a>`)
     .join(", ");
   const playlistButtons = (video.playlist_urls || [])
@@ -304,17 +315,27 @@ function renderVideoPage(slug) {
     .join("");
   const related = findRelatedVideos(video, 3);
   const moreLinks = findRelatedVideos(video, 4, video.slug, true);
+  const statsList = buildStatsList(video.stats);
+
+  const metaParts = [];
+  if (video.published) {
+    metaParts.push(`<time datetime="${video.published}">Published ${formatDate(video.published)}</time>`);
+  }
+  const durationText = formatDuration(video.duration);
+  if (durationText) {
+    metaParts.push(`<span>Duration: ${durationText}</span>`);
+  }
+  if (categories) {
+    metaParts.push(`<span>Categories: ${categories}</span>`);
+  }
 
   main.innerHTML = `
     ${breadcrumbs}
     <article>
       <header>
         <h1>${video.title}</h1>
-        <div class="video-meta">
-          <time datetime="${video.published}">Published ${formatDate(video.published)}</time>
-          <span>Duration: ${formatDuration(video.duration)}</span>
-          <span>Categories: ${categories}</span>
-        </div>
+        <div class="video-meta">${metaParts.join(" · ")}</div>
+        ${statsList}
       </header>
       <div class="video-player">
         <div class="embed">
@@ -322,7 +343,7 @@ function renderVideoPage(slug) {
         </div>
       </div>
       <section class="video-description">
-        <p>${video.description_long}</p>
+        <p>${video.description_long || video.description_short || ""}</p>
       </section>
       ${renderLyricsSection(video.lyrics)}
       <section>
@@ -428,26 +449,50 @@ function setOrCreateLink(rel, href) {
 }
 
 function videoCard(video) {
+  const published = formatDate(video.published);
+  const duration = formatDuration(video.duration);
+  const stats = video.stats || {};
+  const metaParts = [];
+  if (published) {
+    metaParts.push(`<time datetime="${video.published}">${published}</time>`);
+  }
+  if (duration) {
+    metaParts.push(`<span>${duration}</span>`);
+  }
+  const statsBits = [];
+  if (stats.views) {
+    statsBits.push(`${formatNumber(stats.views)} views`);
+  }
+  if (stats.likes) {
+    statsBits.push(`${formatNumber(stats.likes)} likes`);
+  }
+  if (stats.comments) {
+    statsBits.push(`${formatNumber(stats.comments)} comments`);
+  }
+  const statsHtml = statsBits.length ? `<p class="video-stats">${statsBits.join(" · ")}</p>` : "";
+  const metaHtml = metaParts.length ? `<div class="meta">${metaParts.join(" · ")}</div>` : "";
   return `
     <article class="video-card">
       <a href="${resolvePath(`videos/${video.slug}/`)}">
         <img src="${video.thumb_url || resolvePath(CONFIG.DEFAULT_THUMB)}" alt="${video.title}" loading="lazy">
         <h3>${video.title}</h3>
       </a>
-      <div class="meta">
-        <time datetime="${video.published}">${formatDate(video.published)}</time>
-        <span> · ${formatDuration(video.duration)}</span>
-      </div>
-      <p>${video.description_short}</p>
+      ${metaHtml}
+      ${statsHtml}
+      <p>${video.description_short || ""}</p>
       <a class="btn" href="${resolvePath(`videos/${video.slug}/`)}">Open video page</a>
     </article>`;
 }
 
 function formatDate(dateString) {
-  return new Intl.DateTimeFormat("en-IN", { dateStyle: "medium" }).format(new Date(dateString));
+  if (!dateString) return "";
+  const date = new Date(dateString);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("en-IN", { dateStyle: "medium" }).format(date);
 }
 
 function formatDuration(isoDuration) {
+  if (!isoDuration) return "";
   const match = /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/.exec(isoDuration);
   if (!match) return "";
   const hours = match[1] ? `${match[1]}h ` : "";
@@ -456,10 +501,28 @@ function formatDuration(isoDuration) {
   return `${hours}${minutes}${seconds}`.trim();
 }
 
+function buildStatsList(stats = {}) {
+  const items = [];
+  if (stats.views) {
+    items.push(`<li><strong>${formatNumber(stats.views)}</strong> YouTube views</li>`);
+  }
+  if (stats.likes) {
+    items.push(`<li><strong>${formatNumber(stats.likes)}</strong> likes from families</li>`);
+  }
+  if (stats.comments) {
+    items.push(`<li><strong>${formatNumber(stats.comments)}</strong> community comments</li>`);
+  }
+  if (!items.length) {
+    return "";
+  }
+  return `<ul class="video-stats-list">${items.join("")}</ul>`;
+}
+
 function generateEducationalPoints(video) {
   const items = new Set();
-  video.tags.slice(0, 4).forEach(tag => items.add(`Encourages learning about ${tag.toLowerCase()}.`));
-  video.categories.forEach(category => items.add(`Celebrates ${category.toLowerCase()} themes with Malayalam vocabulary.`));
+  const tags = Array.isArray(video.tags) ? video.tags : [];
+  tags.slice(0, 4).forEach(tag => items.add(`Encourages learning about ${tag.toLowerCase()}.`));
+  (video.categories || []).forEach(category => items.add(`Celebrates ${category.toLowerCase()} themes with Malayalam vocabulary.`));
   return Array.from(items).slice(0, 6);
 }
 
@@ -510,6 +573,63 @@ function injectHomeJsonLd() {
     }
   };
   ld.textContent = JSON.stringify(json, null, 2);
+}
+
+function injectVideoGalleryJsonLd(videos) {
+  if (!Array.isArray(videos) || !videos.length) {
+    return;
+  }
+  let script = document.getElementById("ld-videos");
+  if (!script) {
+    script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "ld-videos";
+    document.head.appendChild(script);
+  }
+  const hasPart = videos.map(video => {
+    const stats = video.stats || {};
+    const interactionStatistic = [];
+    if (stats.views) {
+      interactionStatistic.push({
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "WatchAction" },
+        "userInteractionCount": stats.views
+      });
+    }
+    if (stats.likes) {
+      interactionStatistic.push({
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "LikeAction" },
+        "userInteractionCount": stats.likes
+      });
+    }
+    if (stats.comments) {
+      interactionStatistic.push({
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "CommentAction" },
+        "userInteractionCount": stats.comments
+      });
+    }
+    return {
+      "@type": "VideoObject",
+      "name": video.title,
+      "uploadDate": video.published ? `${video.published}T00:00:00+05:30` : undefined,
+      "thumbnailUrl": [video.thumb_url].filter(Boolean),
+      "duration": video.duration,
+      "inLanguage": video.lang,
+      "url": `https://www.youtube.com/watch?v=${video.yt_id}`,
+      "interactionStatistic": interactionStatistic
+    };
+  });
+  const payload = {
+    "@context": "https://schema.org",
+    "@type": "VideoGallery",
+    "name": "Ambambo Kili Malayalam Kids Songs – Video Library",
+    "description": "Watch Malayalam lullabies, folk dance songs, and multilingual kids videos from Ambambo Kili.",
+    "url": absoluteUrl("videos/"),
+    "hasPart": hasPart
+  };
+  script.textContent = JSON.stringify(payload, null, 2);
 }
 
 function injectVideoJsonLd(video) {

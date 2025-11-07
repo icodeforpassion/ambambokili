@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
-Sitemap: https://icodeforpassion.github.io/ambambokili/sitemap.xml
+Sitemap: https://ambambokili.com/sitemap.xml
+Host: ambambokili.com
+
+# Prevent indexing of system or test files
+Disallow: /README
+Disallow: /LICENSE
+Disallow: /test/

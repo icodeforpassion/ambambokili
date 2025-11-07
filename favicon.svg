@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ambambo Kili logo">
+  <defs>
+    <linearGradient id="wingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffcc4d" />
+      <stop offset="100%" stop-color="#ff7a59" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#1f7a8c" />
+  <path d="M20 44c6-1 10-6 12-11 1-3 0-7-3-9-3-3-8-3-12-1 3-6 9-10 16-10 10 0 18 7 18 18 0 10-7 17-17 17-5 0-10-1-14-4z" fill="url(#wingGradient)" />
+  <circle cx="40" cy="26" r="6" fill="#fff" />
+  <circle cx="40" cy="26" r="3" fill="#1f2a1f" />
+</svg>

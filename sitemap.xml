@@ -1,81 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/</loc>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/blog/</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://ambambokili.com/malayalam-kids-songs.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/about/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/blog/malayalam-kids-songs-seo-guide/</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://ambambokili.com/blog/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/songs.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/blog/malayalam-kids-songs-seo-guide/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/about.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/contact.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/folk/</loc>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/baby-baby-karayalle.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/nature/</loc>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/kochu-nakshathrame.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/dance/</loc>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/dolphins-birthday.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/family/</loc>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/onnanam-kochu-thumbi.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/village/</loc>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/kookoo-theevandi.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/story/</loc>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/pachaklari-song.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/poem/</loc>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://icodeforpassion.github.io/ambambokili/ambiliyammava-thaamara.html</loc>
-    <lastmod>2025-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ambambokili.com/categories/animals/</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/categories/lullaby/</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/pacha-thatha-paattu/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/koo-koo-theevandi/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/baby-baby-karayalle/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/veetumuttathe-praavukal/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/dolphin-birthday-song/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/pachakkari-song/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/kaattile-koottukar/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/kochu-nakshathrame/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/onnanam-kochu-thumbi/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/ee-valliyil-ninnu-chemme-pokkal/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/ambiliyammavaa/</loc>
+    <priority>0.6</priority>
   </url>
 </urlset>

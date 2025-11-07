@@ -1,5 +1,5 @@
 Contact: mailto:hello@ambambokili.example
-Encryption: https://ambambokili.github.io/pgp.txt
-Acknowledgements: https://ambambokili.github.io/
+Encryption: https://ambambokili.com/pgp.txt
+Acknowledgements: https://ambambokili.com/
 Preferred-Languages: en, ml
-Policy: https://ambambokili.github.io/about/
+Policy: https://ambambokili.com/about/

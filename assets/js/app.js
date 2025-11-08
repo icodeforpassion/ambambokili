@@ -25,6 +25,13 @@ function formatNumber(value) {
   return new Intl.NumberFormat("en-IN").format(value);
 }
 
+function formatUploadDate(dateString) {
+  if (!dateString) {
+    return undefined;
+  }
+  return dateString.includes("T") ? dateString : `${dateString}T00:00:00+05:30`;
+}
+
 function resolvePath(path) {
   if (!path) return path;
   if (PROTOCOL_REGEX.test(path) || path.startsWith('//') || path.startsWith('#')) {
@@ -613,7 +620,7 @@ function injectVideoGalleryJsonLd(videos) {
     return {
       "@type": "VideoObject",
       "name": video.title,
-      "uploadDate": video.published ? `${video.published}T00:00:00+05:30` : undefined,
+      "uploadDate": formatUploadDate(video.published),
       "thumbnailUrl": [video.thumb_url].filter(Boolean),
       "duration": video.duration,
       "inLanguage": video.lang,
@@ -641,7 +648,7 @@ function injectVideoJsonLd(video) {
     "name": video.title,
     "description": video.description_short,
     "thumbnailUrl": [video.thumb_url],
-    "uploadDate": video.published,
+    "uploadDate": formatUploadDate(video.published),
     "duration": video.duration,
     "embedUrl": `https://www.youtube.com/embed/${video.yt_id}`,
     "url": absoluteUrl(`videos/${video.slug}/`),

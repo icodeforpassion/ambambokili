@@ -574,6 +574,82 @@ img {
   margin-bottom: 1.5rem;
 }
 
+.toc {
+  background: var(--surface-alt);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+
+.toc h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.toc ol {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.toc a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.toc a:hover,
+.toc a:focus {
+  text-decoration: underline;
+}
+
+.lyrics-section {
+  margin-bottom: 3.5rem;
+}
+
+.lyrics-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.lyrics-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.lyrics-grid > div {
+  background: var(--surface-alt);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 12px 35px rgba(12, 56, 44, 0.06);
+}
+
+.lyrics-grid h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.lyrics-grid p {
+  margin-bottom: 1rem;
+}
+
+.lyrics-grid ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  .lyrics-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .toc ol {
+    columns: 1;
+  }
+}
+
 .blog-highlight {
   background: linear-gradient(180deg, rgba(22, 143, 101, 0.08), rgba(242, 169, 0, 0.05));
   padding: 3rem 0;

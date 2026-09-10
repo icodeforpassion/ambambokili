@@ -17,3 +17,4 @@ Allow: /assets/
 Allow: /data/videos.json
 
 Sitemap: https://ambambokili.com/sitemap.xml
+Sitemap: https://ambambokili.com/video-sitemap.xml

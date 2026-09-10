@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://ambambokili.com/videos/petrol-full-tank-kili-short/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/B-1AEBb-uKc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>പെട്രോൾ ഫുൾ ടാങ്ക്… രണ്ട് ചിറകിലും! | Malayalam Funny Short | Ambambo Kili</video:title>
+      <video:description>Funny Malayalam Ambambo Kili Short featuring a mischievous parrot and a petrol full-tank joke for kids and families.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/B-1AEBb-uKc</video:player_loc>
+      <video:publication_date>2026-09-10</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/one-kilo-chilli-hungry-kili-short/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/sjgD3yDchog/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ഒരു കിലോ മുളക് ഓർഡർ ചെയ്തതാ… പക്ഷേ കിളിക്ക് വിശന്നു പോയി! | Malayalam Funny Short</video:title>
+      <video:description>Family-friendly Malayalam comedy Short from Ambambo Kili where a hungry parrot turns a one-kilo chilli order into a quick visual joke.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/sjgD3yDchog</video:player_loc>
+      <video:publication_date>2026-09-10</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/aamayum-muyalum/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/UY9xK8sWaSw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ആമയും മുയലും | Funny Malayalam Kids Story Song | Ambambo Kili</video:title>
+      <video:description>A playful Malayalam musical retelling of the tortoise and hare with animal characters, singalong refrains and a simple moral for children.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/UY9xK8sWaSw</video:player_loc>
+      <video:publication_date>2025-11-13</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://ambambokili.com/videos/poongatte-melle-veeshu-kerala-melody/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/FVigyRI1mvg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>പൂങ്കാറ്റേ മെല്ലെ വീശൂ | Malayalam Lullaby | Ambambo Kili</video:title>
+      <video:description>Gentle Malayalam lullaby and Kerala melody from Ambambo Kili with moonlit visuals, soft music and a calming bedtime mood for families.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/FVigyRI1mvg</video:player_loc>
+      <video:publication_date>2025-11-09</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+</urlset>

@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ambambokili.com/</loc><lastmod>2026-09-10</lastmod><priority>1.0</priority></url>
-  <url><loc>https://ambambokili.com/malayalam-kids-songs.html</loc><priority>0.9</priority></url>
-  <url><loc>https://ambambokili.com/about/</loc><priority>0.7</priority></url>
-  <url><loc>https://ambambokili.com/blog/</loc><lastmod>2026-09-10</lastmod><priority>0.9</priority></url>
-  <url><loc>https://ambambokili.com/blog/confused-about-ai-platform/</loc><lastmod>2026-09-10</lastmod><priority>0.9</priority></url>
-  <url><loc>https://ambambokili.com/blog/how-to-make-kids-animation-videos/</loc><lastmod>2026-09-10</lastmod><priority>0.9</priority></url>
-  <url><loc>https://ambambokili.com/blog/how-to-make-malayalam-kids-songs-youtube/</loc><lastmod>2026-09-10</lastmod><priority>0.9</priority></url>
-  <url><loc>https://ambambokili.com/blog/ai-tools-for-kids-video-production/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://ambambokili.com/blog/write-kids-video-script-storyboard/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://ambambokili.com/blog/create-consistent-cartoon-characters-ai/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://ambambokili.com/blog/youtube-shorts-for-kids-comedy/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://ambambokili.com/blog/kids-video-thumbnail-title-seo/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://ambambokili.com/blog/youtube-made-for-kids-guide/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://ambambokili.com/blog/edit-kids-videos-voiceover-music-subtitles/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://ambambokili.com/blog/malayalam-nursery-rhyme-video-ideas/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://ambambokili.com/blog/malayalam-kids-song-lyrics/</loc><priority>0.7</priority></url>
-  <url><loc>https://ambambokili.com/categories/</loc><priority>0.6</priority></url>
+  <url><loc>https://ambambokili.com/</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ambambokili.com/malayalam-kids-songs.html</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ambambokili.com/about/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://ambambokili.com/blog/</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ambambokili.com/blog/confused-about-ai-platform/</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ambambokili.com/blog/how-to-make-kids-animation-videos/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ambambokili.com/blog/how-to-make-malayalam-kids-songs-youtube/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ambambokili.com/blog/ai-tools-for-kids-video-production/</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ambambokili.com/blog/write-kids-video-script-storyboard/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ambambokili.com/blog/create-consistent-cartoon-characters-ai/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ambambokili.com/blog/youtube-shorts-for-kids-comedy/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ambambokili.com/blog/kids-video-thumbnail-title-seo/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ambambokili.com/blog/youtube-made-for-kids-guide/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ambambokili.com/blog/edit-kids-videos-voiceover-music-subtitles/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ambambokili.com/blog/malayalam-nursery-rhyme-video-ideas/</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ambambokili.com/blog/malayalam-kids-song-lyrics/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://ambambokili.com/categories/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://ambambokili.com/categories/folk/</loc><priority>0.5</priority></url>
   <url><loc>https://ambambokili.com/categories/nature/</loc><priority>0.5</priority></url>
   <url><loc>https://ambambokili.com/categories/dance/</loc><priority>0.5</priority></url>
@@ -26,7 +28,8 @@
   <url><loc>https://ambambokili.com/categories/poem/</loc><priority>0.5</priority></url>
   <url><loc>https://ambambokili.com/categories/animals/</loc><priority>0.5</priority></url>
   <url><loc>https://ambambokili.com/categories/lullaby/</loc><priority>0.5</priority></url>
-  <url><loc>https://ambambokili.com/videos/</loc><priority>0.8</priority></url>
+
+  <url><loc>https://ambambokili.com/videos/</loc><lastmod>2026-09-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://ambambokili.com/videos/petrol-full-tank-kili-short/</loc><lastmod>2026-09-10</lastmod><priority>0.9</priority></url>
   <url><loc>https://ambambokili.com/videos/one-kilo-chilli-hungry-kili-short/</loc><lastmod>2026-09-10</lastmod><priority>0.9</priority></url>
   <url><loc>https://ambambokili.com/videos/achchante-sammanam-fathers-gift-short/</loc><priority>0.6</priority></url>

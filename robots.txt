@@ -1,9 +1,19 @@
+# Ambambo Kili robots.txt
+# Updated: 2026-09-10
+
 User-agent: *
 Allow: /
-Sitemap: https://ambambokili.com/sitemap.xml
-Host: ambambokili.com
 
-# Prevent indexing of system or test files
-Disallow: /README
-Disallow: /LICENSE
+# Keep repository/support files out of search results.
+Disallow: /README.md
+Disallow: /pgp.txt
 Disallow: /test/
+
+# Explicitly allow crawlable site content and assets.
+Allow: /blog/
+Allow: /videos/
+Allow: /categories/
+Allow: /assets/
+Allow: /data/videos.json
+
+Sitemap: https://ambambokili.com/sitemap.xml
